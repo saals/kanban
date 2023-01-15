@@ -1,0 +1,26 @@
+.footer {
+  padding: 17px 0;
+  color: #ffffff;
+  background: #0067A3;
+}
+
+.wrap {
+  display: flex;
+  /*align-items: center;*/
+  flex-wrap: wrap;
+}
+
+.text {
+  white-space: nowrap;
+  /*margin-top: 10px;*/
+  margin-right: 35px;
+}
+
+/*.text:first-of-type {
+  margin-right: 35px;
+}*/
+
+.text:last-of-type {
+  margin-left: auto;
+  margin-right: 0;
+}

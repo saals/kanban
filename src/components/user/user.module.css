@@ -1,0 +1,70 @@
+.user {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  width: 134px;
+}
+
+.avatar {
+  display: block;
+  width: 40px;
+  height: 40px;
+  background-color: #fff;
+  border-radius: 50%;
+}
+
+.button {
+  padding: 6px 0 6px 6px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.button::before {
+  display: block;
+  content: url("../../assets/arrow-down.svg");
+  width: 24px;
+  height: 24px;
+}
+
+.active.button::before {
+  transform: rotate(180deg);
+}
+
+.userMenu {
+  position: relative;
+  width: 100%;
+
+/*  bottom: -12px;
+  margin: 0;*/
+  margin: 12px 0 0;
+
+  padding: 7px;
+  border-radius: 5px;
+  background: #ffffff;
+  list-style-type: none;
+
+}
+
+.userMenu::before {
+  display: block;
+  content: "";
+  width: 11px;
+  height: 11px;
+  background: #ffffff;
+  position: absolute;
+  top: -5px;
+  right: 45px;
+  transform: rotate(45deg);
+}
+
+.userItem {
+  font-size: 14px;
+  transition: color 0.2s ease-out;
+}
+
+.userItem:hover {
+  color: #0079bf;
+  cursor: pointer;
+}

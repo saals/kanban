@@ -1,0 +1,16 @@
+.header {
+  padding: 8px 0;
+  background: #0067A3;
+}
+
+.wrap {
+  display: flex;
+}
+
+.title {
+  margin: 0 auto 0 0;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 36px; /*33px*/
+  color: #ffffff;
+}

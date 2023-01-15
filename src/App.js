@@ -1,7 +1,13 @@
+import Header from './components/header/header'
+import Main from './components/main/main'
+import Footer from './components/footer/footer'
+
 function App() {
   return (
-    <div>
-
+    <div className="app-wrap">
+      <Header />
+      <Main />
+      <Footer />
     </div>
   );
 }
