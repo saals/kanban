@@ -1,6 +1,6 @@
-const dataMock = [
+export const dataMock = [
   {
-    title: 'backlog',
+    title: 'Backlog',
     issues: [
       {
         id: '101',
@@ -66,7 +66,7 @@ const dataMock = [
     ],
   },
   {
-    title: 'inProgress',
+    title: 'In Progress',
     issues: [
       {
         id: '301',
@@ -96,5 +96,3 @@ const dataMock = [
     ],
   },
 ]
-
-export default dataMock
