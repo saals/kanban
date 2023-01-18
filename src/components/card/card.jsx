@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 import FormAddNewIssue from '../forms/formAddNewIssue'
 import FormMoveIssue from '../forms/formMoveIssue'
 import css from './card.module.css'
@@ -34,14 +35,17 @@ const Card = ({
       <h2 className={css.title}>{title}</h2>
       <ul className={css.list}>
         {issues.map(issue => (
-            <li key={issue.id} className={css.item}>{issue.name}</li>
+            <li key={issue.id} className={css.item}>
+              <Link to={`/issue/${issue.id}`} className={css.link}>{issue.name}</Link>
+            </li>
           )
         )}
       </ul>
       {
         (isVisible &&
           (title === 'Backlog'
-            ? <FormAddNewIssue formSubmit={formSubmit} toggleVisible={toggleVisible} />
+            ? <FormAddNewIssue formSubmit={formSubmit}
+                               toggleVisible={toggleVisible} />
             : <FormMoveIssue issuesFrom={issuesFrom}
                              selectChange={selectChange} />)) ||
         <button type="button" className={css.button}

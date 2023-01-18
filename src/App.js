@@ -1,9 +1,10 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
+import { BrowserRouter as Router } from 'react-router-dom'
 import Header from './components/header/header'
 import Main from './components/main/main'
 import Footer from './components/footer/footer'
 
-import { dataMock } from './mock'
+// import { dataMock } from './mock'
 
 const emptyState = [
   { title: 'Backlog', issues: [] },
@@ -13,19 +14,21 @@ const emptyState = [
 ]
 
 function App() {
-  // const [backlog] = dataMock.filter(data => data.title === 'backlog')
-  // const [backlog, ready, inProgress, finished] = dataMock
-  // const initialTodos = [backlog, ready, inProgress, finished]
-
-  const initialTodos = dataMock || emptyState
-
+  // const initialTodos = dataMock || emptyState
+  const initialTodos = JSON.parse(window.localStorage.getItem('todos')) || emptyState
   const [ todos, setTodos ] = useState(initialTodos)
+
+  useEffect(() => {
+    window.localStorage.setItem('todos', JSON.stringify(todos))
+  }, [ todos ])
 
   return (
     <div className="app-wrap">
-      <Header />
-      <Main todos={todos} setTodos={setTodos} />
-      <Footer todos={todos} />
+      <Router>
+        <Header />
+        <Main todos={todos} setTodos={setTodos} />
+        <Footer todos={todos} />
+      </Router>
     </div>
   );
 }
