@@ -1,15 +1,12 @@
 .card {
-  width: 298px; /*282-298*/
+  width: 298px;
+  margin-right: auto;
+  margin-left: auto;
   padding: 12px;
   background-color: #ebecf0;
   background-clip: padding-box;
-  border-radius: 18px; /*10-18*/
-
-  /*margin-bottom: 20px;*/
-
-    margin-right: auto;
-    margin-left: auto;
-    border: 8px solid transparent;
+  border-radius: 18px;
+  border: 8px solid transparent;
 }
 
 .title {
@@ -18,17 +15,17 @@
 }
 
 .list {
+  max-height: 50vh;
   margin: 0 0 15px 0;
   padding: 0;
   list-style-type: none;
-
-  max-height: 50vh;
   overflow-y: auto;
 }
 
 .item {
   padding: 8px;
   background-color: #ffffff;
+  border-radius: 5px;
 }
 
 .item:not(:last-child) {
@@ -53,4 +50,9 @@
 .button:hover {
   background-color: #ffffff;
   cursor: pointer;
+}
+
+.button:disabled {
+  cursor: initial;
+  background-color: transparent;
 }

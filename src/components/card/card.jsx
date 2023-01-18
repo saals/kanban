@@ -18,8 +18,8 @@ const Card = ({
     setVisible(!isVisible)
   }
 
-  const formSubmit = (name, description) => {
-    addNewIssue(name, description)
+  const formSubmit = (name) => {
+    addNewIssue(name)
     toggleVisible()
   }
 
@@ -41,11 +41,13 @@ const Card = ({
       {
         (isVisible &&
           (title === 'Backlog'
-            ? <FormAddNewIssue formSubmit={formSubmit} />
+            ? <FormAddNewIssue formSubmit={formSubmit} toggleVisible={toggleVisible} />
             : <FormMoveIssue issuesFrom={issuesFrom}
                              selectChange={selectChange} />)) ||
         <button type="button" className={css.button}
-                onClick={toggleVisible}>Add card
+                onClick={toggleVisible}
+                disabled={!issuesFrom.length}>
+          Add card
         </button>
       }
     </div>

@@ -1,32 +1,32 @@
 import { useState } from 'react'
 import css from './forms.module.css'
 
-const FormAddNewIssue = ({ formSubmit }) => {
+const FormAddNewIssue = ({ formSubmit, toggleVisible }) => {
 
-  const [ values, setValues ] = useState({
-    name: '',
-    description: ''
-  })
+  const [ value, setValue ] = useState('')
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    if (values.name) {
-      formSubmit(values.name, values.description)
+    if (value.trim()) {
+      formSubmit(value)
+    } else {
+      toggleVisible()
     }
   }
 
   const handleChange = (e) => {
-    setValues({ ...values, [e.target.name]: e.target.value })
+    setValue(e.target.value)
   }
 
   return (
     <form className={css.form} onSubmit={handleSubmit}>
-      <input type="text" name="name" id="issueName" value={values.name}
-             onChange={handleChange} />
-      <textarea name="description" id="issueDescription"
-                value={values.description}
-                onChange={handleChange} />
-      <button type="submit">Submit</button>
+      <input type="text" placeholder="New task title..."
+             name="name" id="issueName" value={value}
+             onChange={handleChange}
+             className={css.input} />
+      <button type="submit" className={css.button}>
+        {value.trim() ? "Submit" : "Cancel"}
+      </button>
     </form>
   )
 }

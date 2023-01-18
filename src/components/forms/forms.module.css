@@ -1,4 +1,52 @@
-.form {
-  display: flex;
-  flex-direction: column;
+.input, .select {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 7px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  font: inherit;
 }
+
+.button {
+  width: 102px;
+  padding: 4px 8px;
+  font: inherit;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  background-color: #0079bf;
+  transition: background-color .2s ease-out, background-color .2s ease-out;
+}
+
+.button:hover {
+  background-color: #ffffff;
+  color: #0079bf;
+  cursor: pointer;
+}
+
+.select {
+  appearance: none;
+  cursor: pointer;
+
+  background-image: url('../../assets/select-down.svg');
+  background-repeat: no-repeat;
+  background-position: top 50% right 14px;
+  color: #5e6c84;
+}
+
+.optionNone {
+  display: none;
+  color: #5e6c84;
+  font-size: 14px;
+}
+
+.option {
+  background-color: #ebecf0;
+  font-size: 18px;
+  color: #000;
+}
+
+
+

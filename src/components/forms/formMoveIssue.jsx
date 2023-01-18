@@ -10,15 +10,20 @@ const FormMoveIssue = ({ issuesFrom, selectChange }) => {
   }
 
   return (
-    <form>
-      <select name="select" id="issueSelect"
-              onChange={handleChange} value={value}>
-        <option value="" />
-        {issuesFrom.map(issue => (
-          <option key={issue.id} value={issue.name}>{issue.name}</option>
-        ))}
-      </select>
-    </form>
+    <select name="select" id="issueSelect"
+            onChange={handleChange} value={value}
+            className={css.select}>
+      <option className={css.optionNone}>Select from list...</option>
+      {issuesFrom.map(issue => (
+        <option key={issue.id} value={issue.name}
+                className={css.option} title={issue.name}>
+          {/*{issue.name} todo*/}
+          {issue.name.length <= issue.name.slice(0, 25).length
+            ? issue.name
+            : issue.name.slice(0, 25) + "..."}
+        </option>
+      ))}
+    </select>
   )
 }
 

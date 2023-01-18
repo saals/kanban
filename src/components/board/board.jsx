@@ -1,15 +1,13 @@
+import uniqid from 'uniqid'
 import Card from '../card/card'
 import css from './board.module.css'
 
 const Board = ({ todos, setTodos }) => {
   const updatedTodos = [ ...todos ]
 
-  const addNewIssue = (name, description) => {
+  const addNewIssue = (name) => {
     // const updatedTodos = [ ...todos ]
-    updatedTodos[0].issues.push({ id: 1111, name, description })
-
-// todo: add unique
-
+    updatedTodos[0].issues.push({ id: uniqid(), name, description: 'This task has no description' })
     setTodos(updatedTodos)
   }
 
@@ -27,7 +25,7 @@ const Board = ({ todos, setTodos }) => {
               title={todo.title}
               issues={todo.issues}
               issuesIndex={index}
-              issuesFrom={index > 0 ? todos[index - 1].issues : []}
+              issuesFrom={index > 0 ? todos[index - 1].issues : Array(1)}
               issuesFromIndex={index > 0 ? index - 1 : 0}
               addNewIssue={addNewIssue}
               moveIssue={moveIssue}
