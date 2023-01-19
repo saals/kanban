@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import userAvatar from '../../assets/user-avatar.png'
-// import arrowDown from '../../assets/arrow-down.svg'
 import css from './user.module.css'
 
 const User = () => {

@@ -22,7 +22,6 @@ const IssueDetail = ({ todos, setTodos }) => {
     updateTodos[issueData.indexTodo]
       .issues[issueData.indexIssue]
       .description = e.target.value || 'This task has no description'
-
     setTodos(updateTodos)
   }
 

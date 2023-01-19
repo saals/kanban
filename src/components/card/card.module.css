@@ -15,7 +15,7 @@
 }
 
 .list {
-  max-height: 45vh;
+  max-height: 45vmin;
   margin: 0 0 15px 0;
   padding: 0;
   list-style-type: none;

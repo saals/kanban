@@ -6,13 +6,15 @@ const Board = ({ todos, setTodos }) => {
   const updatedTodos = [ ...todos ]
 
   const addNewIssue = (name) => {
-    // const updatedTodos = [ ...todos ]
-    updatedTodos[0].issues.push({ id: uniqid(), name, description: 'This task has no description' })
+    updatedTodos[0].issues.push({
+      id: uniqid(),
+      name,
+      description: 'This task has no description'
+    })
     setTodos(updatedTodos)
   }
 
   const moveIssue = (from, to, index) => {
-    // const updatedTodos = [ ...todos ]
     const [ issue ] = updatedTodos[from].issues.splice(index, 1)
     updatedTodos[to].issues.push(issue)
     setTodos(updatedTodos)

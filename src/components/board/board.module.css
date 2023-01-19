@@ -1,8 +1,7 @@
 .board {
   display: flex;
-  /*justify-content: space-between;*/
   flex-wrap: wrap;
   align-items: flex-start;
-  padding-top: 12px; /*20-12*/
-  padding-bottom: 12px; /*20-12*/
+  padding-top: 12px;
+  padding-bottom: 12px;
 }

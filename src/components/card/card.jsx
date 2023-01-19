@@ -36,7 +36,9 @@ const Card = ({
       <ul className={css.list}>
         {issues.map(issue => (
             <li key={issue.id} className={css.item}>
-              <Link to={`/issue/${issue.id}`} className={css.link}>{issue.name}</Link>
+              <Link to={`/issue/${issue.id}`}
+                    className={css.link}>{issue.name}
+              </Link>
             </li>
           )
         )}

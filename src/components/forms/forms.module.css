@@ -29,7 +29,6 @@
 .select {
   appearance: none;
   cursor: pointer;
-
   background-image: url('../../assets/select-down.svg');
   background-repeat: no-repeat;
   background-position: top 50% right 14px;
@@ -47,6 +46,3 @@
   font-size: 18px;
   color: #000;
 }
-
-
-
