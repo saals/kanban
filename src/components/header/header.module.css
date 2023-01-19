@@ -1,0 +1,30 @@
+.header {
+  padding: 8px 0;
+  background: #0067a3;
+}
+
+.wrap {
+  display: flex;
+}
+
+.title {
+  margin: 0;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 36px;
+  color: #ffffff;
+}
+
+.user {
+  margin-left: auto;
+}
+
+@media (max-width: 576px) {
+  .header {
+    background: #0079bf;
+  }
+
+  .title {
+    display: none;
+  }
+}

@@ -1,0 +1,65 @@
+.card {
+  width: 298px;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 12px;
+  background-color: #ebecf0;
+  background-clip: padding-box;
+  border-radius: 18px;
+  border: 8px solid transparent;
+}
+
+.title {
+  margin: 0 0 15px;
+  font: inherit;
+}
+
+.list {
+  max-height: 45vmin;
+  margin: 0 0 15px 0;
+  padding: 0;
+  list-style-type: none;
+  overflow-y: auto;
+}
+
+.item {
+  padding: 8px;
+  background-color: #ffffff;
+  border-radius: 5px;
+}
+
+.item:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+.link {
+  display: block;
+  width: 100%;
+  color: inherit;
+  text-decoration: none;
+}
+
+.button {
+  width: 102px;
+  padding: 4px 8px;
+  font: inherit;
+  color: #5e6c84;
+  text-align: right;
+  border: none;
+  border-radius: 5px;
+  background-color: transparent;
+  background-image: url('../../assets/add-card.svg');
+  background-repeat: no-repeat;
+  background-position: 2px 6px;
+  transition: background-color .2s ease-out;
+}
+
+.button:hover {
+  background-color: #ffffff;
+  cursor: pointer;
+}
+
+.button:disabled {
+  cursor: initial;
+  background-color: transparent;
+}

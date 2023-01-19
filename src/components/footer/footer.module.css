@@ -1,0 +1,36 @@
+.footer {
+  padding: 17px 0;
+  color: #ffffff;
+  background: #0067a3;
+}
+
+.wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.text {
+  white-space: nowrap;
+  margin-right: 35px;
+}
+
+.text:last-of-type {
+  margin-left: auto;
+  margin-right: 0;
+}
+
+@media (max-width: 768px) {
+  .text:last-of-type {
+    display: none;
+  }
+}
+
+@media (max-width: 576px) {
+  .footer {
+    background: #0079bf;
+  }
+
+  .text {
+    display: none;
+  }
+}
